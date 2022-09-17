@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudoclasses</title>
+  
+  <style>
+    div:hover {
+        border: 2px solid red;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    body :nth-child(3) {
+        background-color: gold;
+    }
+
+    body div:nth-of-type(1) h3{
+        font-style: italic;
+    }
+
+    span div:nth-of-type(1) {
+        color: blue;
+    }
+    span div:nth-of-type(2){
+        color: green;
+    }
+    span div:nth-of-type(3){
+        color: darkgray;
+    }
+    span div:nth-of-type(4){
+        color: brown;
+    }
+    span div:nth-of-type(5){
+        color: aqua;
+    }
+
+  </style>
+</head>
+<body>
+    <span>
+        <h1>Paleta de Cores</h1>
+        <p>Vamos criar uma paleta de cores com as divs abaixo:</p>
+        <div>
+          <h3>Cor primária</h3>
+        </div>
+        <div>
+          <h3>Cor Secundária</h3>
+        </div>
+        <div>
+          <h3>Cor Complementar</h3>
+        </div>
+        <div>
+          <h3>Cor Escura</h3>
+        </div>
+        <div>
+          <h3>Cor Clara</h3>
+        </div>
+    </span>
+    <h1>Paleta de Cores</h1>
+    <p>Vamos criar uma paleta de cores com as divs abaixo:</p>
+    <div>
+      <h3>Cor primária</h3>
+    </div>
+    <div>
+      <h3>Cor Secundária</h3>
+    </div>
+    <div>
+      <h3>Cor Complementar</h3>
+    </div>
+    <div>
+      <h3>Cor Escura</h3>
+    </div>
+    <div>
+      <h3>Cor Clara</h3>
+    </div>
+</body>
+</html>
