@@ -43,7 +43,7 @@ switch (chessPiece.toLowerCase()) {
     break;
   case "pawn":
     console.log(
-      "1 up or (1|2) up if it is his first move, capture 1 square diagonaly"
+      "1 up or (1 to 2) up if it is his first move, capture 1 square diagonaly"
     );
     break;
 
