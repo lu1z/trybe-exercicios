@@ -15,11 +15,9 @@ let array = ["java", "javascript", "python", "html", "css"];
 let maior = array[0];
 let menor = array[0];
 
-for(let str of array) {
-    if(str.length > maior.length)
-        maior = str;
-    if(str.length < menor.length)
-        menor = str;
+for (let str of array) {
+  if (str.length > maior.length) maior = str;
+  if (str.length < menor.length) menor = str;
 }
 
 console.log(maior);
