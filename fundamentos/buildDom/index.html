@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //1
+      let element = document.createElement("h1");
+      element.innerText = "Exercício - JavaScript DOM";
+      document.getElementsByTagName("body")[0].appendChild(element);
+      //2
+      element = document.createElement("main");
+      element.className = "main-content";
+      document.getElementsByTagName("body")[0].appendChild(element);
+      //3
+      element = document.createElement('section');
+      element.className = 'center-content';
+      document.getElementsByClassName('main-content')[0].appendChild(element);
+      //4
+      element = document.createElement('p');
+      document.getElementsByClassName('center-content')[0].appendChild(element);
+      //5
+      element = document.createElement('section');
+      element.className = "left-content";
+      document.getElementsByClassName('main-content')[0].appendChild(element);
+      //6
+      element = document.createElement('section');
+      element.className = "right-content";
+      document.getElementsByClassName('main-content')[0].appendChild(element);
+      //7
+      element = document.createElement("img");
+      element.src = "https://picsum.photos/200";
+      element.className = "small-image";
+      document.getElementsByClassName('left-content')[0].appendChild(element);
+      //8
+      element = document.createElement("ul");
+      document.getElementsByClassName("right-content")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "um";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "dois";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "três";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "quatro";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "cinco";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "seis";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "sete";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "oito";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "nove";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      element = document.createElement("li");
+      element.innerText = "dez";
+      document.getElementsByTagName("ul")[0].appendChild(element);
+      //9
+      element = document.createElement("h3");
+      document.getElementsByClassName('main-content')[0].appendChild(element);
+      element = document.createElement("h3");
+      document.getElementsByClassName('main-content')[0].appendChild(element);
+      element = document.createElement("h3");
+      document.getElementsByClassName('main-content')[0].appendChild(element);
+      //1
+      document.getElementsByTagName("h1")[0].className = "title";
+      //2
+      document.getElementsByTagName("h3")[0].className = "description";
+      document.getElementsByTagName("h3")[1].className = "description";
+      document.getElementsByTagName("h3")[2].className = "description";
+      //3
+      element = document.getElementsByClassName('left-content')[0];
+      element.parentNode.removeChild(element);
+      //4
+      element = document.getElementsByClassName('right-content')[0];
+      element.style.marginRight = "auto";
+      //5
+      element = document.getElementsByClassName('center-content')[0].parentElement;
+      element.style.backgroundColor = "green";
+      //6
+      document.getElementsByTagName("ul")[0].lastElementChild.remove();
+      document.getElementsByTagName("ul")[0].lastElementChild.remove();
+    </script>
+  </body>
+</html>
