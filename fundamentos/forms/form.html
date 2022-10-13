@@ -2,64 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FormBoii</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FormBoii</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
 </head>
 
 <body>
-    <header>
-        <h1>TrybeTrip</h1>
-    </header>
-    <form action="" method="get" id="forms">
-        <fieldset>
-            <legend>Identificação</legend>
-            <label for="full-name">Nome Completo:</label>
-            <input type="text" minlength="10" maxlength="40" name="full-name" id="full-name" />
-            <br />
-            <label for="e-mail">E-mail:</label>
-            <input type="text" minlength="10" maxlength="50" name="e-mail" id="e-mail" />
-        </fieldset>
-        <fieldset>
-            <legend>Preferências</legend>
-            <h3>Destino Preferido:</h3>
-            <input type="radio" name="destiny" id="radio-city" value="city" />
-            <label for="radio-city">Cidade</label>
-            <input type="radio" name="destiny" id="radio-field" value="field" />
-            <label for="radio-field">Campo</label>
-            <input type="radio" name="destiny" id="radio-beach" value="beach" />
-            <label for="radio-beach">Praia</label>
-            <input type="radio" name="destiny" id="radio-mountain" value="mountain" />
-            <label for="radio-mountain">Montanhas</label>
-            <br />
-            <label for="date">Qual a melhor data para realizar a viagem:</label>
-            <input type="date" name="chosen-date" id="date" />
-        </fieldset>
-        <fieldset>
-            <legend>Concurso</legend>
-            <h3>
-                Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
-                <em>TrybeTrip</em>?
-            </h3>
-            <textarea name="defense" id="textarea-defense" cols="140" rows="10" maxlength="500"></textarea>
-        </fieldset>
-        <fieldset>
-            <legend>Comprometimento</legend>
-            <label for="trybe-offer"><input type="checkbox" name="offer" id="trybe-offer" value="offer" />Gostaria de
-                receber outras incríveis oportunidades oferecidas pela
-                <em>Trybe</em>?</label>
+  <header class="container-fluid">
+    <h1 class="display-1">TrybeTrip</h1>
+  </header>
+  <form action="" method="get" id="forms">
+    <fieldset class="container-fluid">
+      <!-- <legend>Identificação</legend> -->
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="Full Name" type="text" minlength="10" maxlength="40" name="full-name"
+          id="full-name" />
+        <label class="form-label" for="full-name">Nome Completo</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="E-mail" type="email" minlength="10" maxlength="50" name="e-mail"
+          id="e-mail" />
+        <label class="form-label" for="e-mail">E-mail</label>
+      </div>
+    </fieldset>
+    <fieldset class="container-fluid">
+      <!-- <legend class="col-sm-2 col-form-label">Preferências</legend> -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">Destino Preferido:</span>
+        <input class="btn-check" autocomplete="off" type="radio" name="destiny" id="radio-city" value="city" />
+        <label class="btn btn-outline-primary" for="radio-city">Cidade</label>
+        <input class="btn-check" autocomplete="off" type="radio" name="destiny" id="radio-field" value="field" />
+        <label class="btn btn-outline-primary" for="radio-field">Campo</label>
+        <input class="btn-check" autocomplete="off" type="radio" name="destiny" id="radio-beach" value="beach" />
+        <label class="btn btn-outline-primary" for="radio-beach">Praia</label>
+        <input class="btn-check" autocomplete="off" type="radio" name="destiny" id="radio-mountain" value="mountain" />
+        <label class="btn btn-outline-primary" for="radio-mountain">Montanhas</label>
+      </div>
 
-            <br />
-            <label for="copy-right"><input type="checkbox" name="copy" required id="copy-right" value="copy" />Concordo
-                que imagens das minhas férias poderão ser usadas na
-                divulgação de concursos futuros.</label>
-        </fieldset>
-        <button type="submit" id="submit-form">Enviar</button>
-        <button type="reset">Limpar</button>
-    </form>
-    <script src="script.js"></script>
+      <div class="input-group mb-3">
+        <span class="input-group-text" for="date">Qual a melhor data para realizar a viagem:</span>
+        <input id="date-input" class="form-control" type="date" name="chosen-date" id="date" placeholder="dd/mm/aaaa" />
+
+      </div>
+    </fieldset>
+    <fieldset class="container-fluid">
+      <!-- <legend>Concurso</legend> -->
+      <div class="form-floating mb-3">
+        <textarea style="height: 200px;" class="form-control" placeholder="Defense Paragrph" name="defense" id="textarea-defense"
+          maxlength="500"></textarea>
+        <label class="form-label" for="textarea-defense">Por que você deveria ser a pessoa desenvolvedora a ganhar o
+          concurso <em>TrybeTrip</em>?</label>
+      </div>
+    </fieldset>
+    <fieldset class="container-fluid">
+      <!-- <legend>Comprometimento</legend> -->
+      <div class="form-check mb-3">
+        <label class="form-check-label" for="trybe-offer"><input class="form-check-input" type="checkbox" name="offer"
+            id="trybe-offer" value="offer" />Gostaria de receber outras incríveis oportunidades oferecidas pela
+          <em>Trybe</em>?</label>
+      </div>
+      <div class="form-check mb-3">
+        <label for="copy-right" class="form-check-label"> <input class="form-check-input" type="checkbox" name="copy"
+            required id="copy-right" value="copy" />Concordo que imagens das minhas férias poderão ser usadas na
+          divulgação de concursos futuros.</label>
+      </div>
+    </fieldset>
+    <!-- <legend>Controle</legend> -->
+    <fieldset class="container-fluid">
+      <button class="btn btn-primary" type="submit" id="submit-form">Enviar</button>
+      <button class="btn btn-danger" type="reset">Limpar</button>
+    </fieldset>
+  </form>
+  <script src="script.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 
 </html>
