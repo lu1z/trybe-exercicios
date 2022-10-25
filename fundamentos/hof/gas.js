@@ -30,6 +30,11 @@ const gameActions = {
     }
     targetu.healthPoints -= typeof dmg === "number" ? dmg : dmg.damaju;
   },
+  variorTime: (attaker, damageCalc, targetu) => {
+    attaker.damage = damageCalc.call(attaker);
+    targetu.healthPoints -= attaker.damage;
+  },
+  turnResults: () => battleMembers,
 };
 
 const mage = {
@@ -58,11 +63,13 @@ while (
   (mage.healthPoints > 0 || warrior.healthPoints > 0) &&
   dragon.healthPoints > 0
 ) {
-  gameActions.attacku(mage, majouDamaju, dragon);
+  gameActions.variorTime(warrior, variorDamaju, dragon);
   console.log(battleMembers);
-  gameActions.attacku(warrior, variorDamaju, dragon);
-  console.log(battleMembers);
-  gameActions.attacku(dragon, doragonDamaju, warrior);
-  console.log(battleMembers);
+  // gameActions.attacku(mage, majouDamaju, dragon);
+  // console.log(battleMembers);
+  // gameActions.attacku(warrior, variorDamaju, dragon);
+  // console.log(battleMembers);
+  // gameActions.attacku(dragon, doragonDamaju, warrior);
+  // console.log(battleMembers);
 }
 console.log(battleMembers);
