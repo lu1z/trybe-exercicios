@@ -64,7 +64,7 @@ while (
   dragon.healthPoints > 0
 ) {
   gameActions.variorTime(warrior, variorDamaju, dragon);
-  console.log(battleMembers);
+  console.log(gameActions.turnResults());
   // gameActions.attacku(mage, majouDamaju, dragon);
   // console.log(battleMembers);
   // gameActions.attacku(warrior, variorDamaju, dragon);
